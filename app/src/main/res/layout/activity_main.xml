@@ -1,24 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <fragment
         android:id="@+id/left_fragment"
-        android:layout_width="110dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:name="com.jnu.student.LeftFragment" />
-
-    <fragment
-        android:id="@+id/right_fragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:name="com.jnu.student.RightFragment" />
+        android:name="com.jnu.student.LeftFragment"/>
 
-    <!-- 其他视图元素和按钮可以继续添加 -->
+    <FrameLayout
+        android:id="@+id/right_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <!-- You can add the content for the FrameLayout here -->
+    </FrameLayout>
 
 </LinearLayout>
